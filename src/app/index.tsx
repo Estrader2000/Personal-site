@@ -1,27 +1,41 @@
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/app/theme-provider";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import HomePage from "./routes/HomePage";
+import RootLayout from "./RootLayout";
+import Home from "./routes/Home";
+import About from "./routes/About";
+import Projects from "./routes/Projects";
+import Contact from "./routes/Contact";
 
 const router = createBrowserRouter([
   {
-    element: <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme" children={undefined}/>
+    element: <RootLayout />,
     children: [
       {
-        path: "/",
-        element: <HomePage />,
-        
+        path: "/#home",
+        element: <Home />,
       },
-
+      {
+        path: "/#about",
+        element: <About />,
+      },
+      {
+        path: "/#projects",
+        element: <Projects />,
+      },
+      {
+        path: "/#contact",
+        element: <Contact />,
+      },
     ],
   },
-  
 ]);
 
 function App() {
   return (
     <>
-        <RouterProvider router={router}/>
-
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </>
   );
 }

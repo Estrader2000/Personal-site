@@ -1,17 +1,15 @@
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-
-const NavLinks = () => {
-  return (
-    <>
-      <NavLink to="/home">Home</NavLink>
-      <NavLink to="/about">About</NavLink>
-      <NavLink to="/projects">Projects</NavLink>
-      <NavLink to="/contact">Contact</NavLink>
-    </>
-  );
-};
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,20 +20,47 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="max-w-1/3 justify end">
-        <div></div>
-        <div className="hiden flex w-full justify-between">
-          <NavLinks />
+      <nav className="flex justify-end">
+        <div className="hidden w-full justify-between gap-4 md:flex">
+          <ul className="flex flex-row gap-4">
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
         </div>
-        <div className="md:hidden">
-          <button onClick={toggleNavbar}>{isOpen ? <X /> : <Menu />}</button>
+        <div className="flex items-center md:hidden">
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger>
+              <Menu strokeWidth={1} className="size-6 text-primary" />
+            </SheetTrigger>
+            <SheetContent>
+              <ul className="flex size-8 flex-col" onClick={toggleNavbar}>
+                <li>
+                  <a href="#home">Home</a>
+                </li>
+                <li>
+                  <a href="#about">About</a>
+                </li>
+                <li>
+                  <a href="#projects">Projects</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+            </SheetContent>
+          </Sheet>
         </div>
       </nav>
-      {isOpen && (
-        <div className="flex basis-full flex-col items-center">
-          <NavLinks />
-        </div>
-      )}
     </>
   );
 };
