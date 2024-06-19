@@ -1,15 +1,6 @@
-import { NavLink } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState } from "react";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,9 +11,9 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="flex justify-end">
-        <div className="hidden w-full justify-between gap-4 md:flex">
-          <ul className="flex flex-row gap-4">
+      <nav className="ml-4 flex items-center">
+        <div className="hidden w-full gap-4 md:flex">
+          <ul className="flex gap-8">
             <li>
               <a href="#home">Home</a>
             </li>
@@ -43,7 +34,10 @@ const Nav = () => {
               <Menu strokeWidth={1} className="size-6 text-primary" />
             </SheetTrigger>
             <SheetContent>
-              <ul className="flex size-8 flex-col" onClick={toggleNavbar}>
+              <ul
+                className="flex flex-col gap-4 text-2xl"
+                onClick={toggleNavbar}
+              >
                 <li>
                   <a href="#home">Home</a>
                 </li>

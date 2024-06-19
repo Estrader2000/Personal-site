@@ -9,18 +9,18 @@ import Contact from "./routes/Contact";
 export default function Header() {
   return (
     <>
-      <header className="sticky top-0 z-50 min-w-full items-center border-b border-border/60 bg-background/85 backdrop-blur">
+      <header className="sticky top-0 z-50 items-center border-b border-border/60 bg-background/85 backdrop-blur xl:container xl:mx-auto">
         <div className="mx-4 flex min-h-14 items-center justify-between">
-          <div className="flex items-center border-none">
+          <div className="flex">
             <Socials />
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex">
             <ModeToggle />
             <Nav />
           </div>
         </div>
       </header>
-      <main>
+      <main className="xl:container xl:mx-auto">
         <Home />
         <About />
         <Projects />
