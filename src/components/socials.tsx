@@ -27,7 +27,7 @@ export default function Socials() {
         download="Ely Strader's resume"
       >
         <Button variant="ghost" size="icon">
-          <ArrowDownToLine strokeWidth={1} />{" "}
+          <ArrowDownToLine strokeWidth={1} />
         </Button>
         <span className="sr-only">Download Resume</span>
       </a>
