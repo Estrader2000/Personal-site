@@ -5,8 +5,8 @@ import { FaGithub, FaLongArrowAltRight } from "react-icons/fa";
 export default function Home() {
   return (
     <>
-      <section className="px-2 py-8 md:py-12 md:pb-8 lg:py-24">
-        <div className="pt-14 text-center md:pb-10">
+      <section id="home" className="px-2 py-8 md:py-12 md:pb-8 lg:py-24">
+        <div className="py-8 text-center md:pb-10 md:pt-14">
           <h1 className="text-4xl font-semibold md:text-6xl">
             <p>Ely Strader</p>
           </h1>
