@@ -1,6 +1,4 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { Outlet } from "react-router";
-import Nav from "./ui/Nav";
 
 type Theme = "dark" | "light" | "system";
 
@@ -60,8 +58,7 @@ export function ThemeProvider({
 
   return (
     <ThemeProviderContext.Provider {...props} value={value}>
-      <Nav />
-      <Outlet />
+      {children}
     </ThemeProviderContext.Provider>
   );
 }
