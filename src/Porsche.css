@@ -8,37 +8,53 @@
   fill: #b5b5b4;
 }
 
-.silver {
-  fill-rule: evenodd;
-  fill: #757575;
-}
-
-.red {
-  fill-rule: evenodd;
-  fill: #b12b28;
-}
-
-.white {
-  fill-rule: evenodd;
-  fill: #eaebeb;
-}
-
-.blue {
-  fill-rule: evenodd;
-  fill: #387e9b;
-}
-
-.black {
-  fill-rule: evenodd;
-  fill: #141414;
-  fill-opacity: 0.9;
-}
-
 .black-wheels {
   fill: #141414;
 }
 
 .silver-wheels {
+  fill: #757575;
+}
+
+.silver-body {
+  fill-rule: evenodd;
+  fill: #757575;
+}
+
+.red-body {
+  fill-rule: evenodd;
+  fill: #b12b28;
+}
+
+.white-body {
+  fill-rule: evenodd;
+  fill: #eaebeb;
+}
+
+.blue-body {
+  fill-rule: evenodd;
+  fill: #387e9b;
+}
+
+.black-body {
+  fill-rule: evenodd;
+  fill: #141414;
+  fill-opacity: 0.9;
+}
+
+.black-tint {
+  fill-rule: evenodd;
+  fill: #141414;
+  fill-opacity: 0.9;
+}
+
+.white-tint {
+  fill-rule: evenodd;
+  fill: #eaebeb;
+}
+
+.silver-tint {
+  fill-rule: evenodd;
   fill: #757575;
 }
 

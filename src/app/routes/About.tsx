@@ -1,4 +1,4 @@
-import Porsche from "@/Porsche";
+import CarComponent from "@/components/car-component";
 import {
   Card,
   CardHeader,
@@ -21,10 +21,6 @@ import {
 import { SiJavascript, SiDrizzle, SiTypescript } from "react-icons/si";
 
 export default function About() {
-  const [bodyColor, setBodyColor] = useState("blue");
-  const [tintColor, setTintColor] = useState("white");
-  const [wheelColor, setWheelColor] = useState("light-silver-wheels");
-
   return (
     <section id="about" className="px-2 py-8 md:py-12 md:pb-8 lg:py-24">
       <h1 className="text-center text-4xl font-bold md:text-6xl">About me</h1>
@@ -154,16 +150,28 @@ export default function About() {
           </CardContent>
         </Card>
       </div>
-      <div className="">
-        <div className="flex">
-          <p className="absolute right-0 top-0 z-10">HIIIIIIIIII</p>
-          <Porsche
-            bodyColor={bodyColor}
-            tintColor={tintColor}
-            wheelColor={wheelColor}
-          />
-        </div>
-      </div>
+
+      <h3 className="px-6 pb-4 text-center text-3xl font-bold md:pb-8 md:text-5xl">
+        Hobbies & Interests
+      </h3>
+      <p className="flex items-center justify-center px-6">
+        <ul className="list-disc">
+          <li>Going to car shows</li>
+          <li>Traveling and trying new foods</li>
+          <li>Working on my car</li>
+          <li>Spending time with friends & family</li>
+          <li>
+            Pretending I'm in Fast & Furious
+            <br /> on my daily commute
+          </li>
+          <li>Reading</li>
+        </ul>
+      </p>
+      <h3 className="pb-10 pt-16 text-center text-3xl font-bold">
+        Did I mention I like cars?
+      </h3>
+
+      <CarComponent />
     </section>
   );
 }
