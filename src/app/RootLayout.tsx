@@ -6,7 +6,7 @@ import About from "./routes/About";
 import Projects from "./routes/Projects";
 import Contact from "./routes/Contact";
 
-export default function Header() {
+export default function RootLayout() {
   return (
     <>
       <header className="sticky top-0 z-50 items-center border-b border-border/60 bg-background/85 backdrop-blur xl:container xl:mx-auto">
@@ -26,6 +26,11 @@ export default function Header() {
         <Projects />
         <Contact />
       </main>
+      <footer className="flex items-center justify-center xl:container xl:mx-auto">
+        <div className="text-muted-foreground">
+          ©2024 Ely Strader. All Rights Reserved.
+        </div>
+      </footer>
     </>
   );
 }
