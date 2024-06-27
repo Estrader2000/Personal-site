@@ -1,6 +1,14 @@
-import { type CarProps } from "@/components/car-component";
+type Props = {
+  bodyColor: string;
+  wheelColor: string;
+  tintColor: string;
+};
 
-export const Porsche = ({ bodyColor, wheelColor, tintColor }: CarProps) => {
+export const Porsche = ({ bodyColor, wheelColor, tintColor }: Props) => {
+  //text-car-blue text-car-white text-car-black text-car-red text-car-silver text-car-light-silver text-car-green
+  const bodyColorText = `text-car-${bodyColor}`;
+  const tintColorText = `text-car-${tintColor}`;
+  const wheelColorText = `text-car-${wheelColor}`;
   return (
     <svg viewBox="0 0 600 250">
       <defs></defs>
@@ -8,54 +16,54 @@ export const Porsche = ({ bodyColor, wheelColor, tintColor }: CarProps) => {
       <rect className="fill-none" />
       <path
         id="body"
-        className={`${bodyColor} fill-current`}
+        className={`${bodyColorText} fill-current`}
         d="M517.8,167.4a87.814,87.814,0,0,1,9.475,7.026l3.09.022a.974.974,0,0,1,.8.406l.936,1.264c6.165,0,9.736,2.024,9.736,4.508v.084h-.11l.478.149c.658.2,1.252.563,1.252,1.251v4.358a1.256,1.256,0,0,1-1.252,1.251h-2v.084c0,2.244-2.7,4.429-7.761,4.83l.205.078c.755,0,.831.756.484,1.921l1.361.013a.668.668,0,0,1,.628.873l-3.194,9.919a1.566,1.566,0,0,1-1.518,1.1l-4.053-.02.413-.763a17.66,17.66,0,0,1-1.611,2.012l2.626,6.379c-.612,0-42.935.063-43.768.02a4.226,4.226,0,0,1-4.338-3.287,11.207,11.207,0,0,1-.313-3.479c.1-2.322-.044-6.15-.044-12.45a39.433,39.433,0,0,0-5.982-20.9,40.771,40.771,0,0,0-34.556-19.22c-20.767,0-36.622,12.956-40.871,35.475-.256,1.358-.574,3.3-.937,5.511l-.005.038-.318,1.933h-.01c-.424,2.507-1.061,6.261-1.289,7.476-.287,1.534-.505,3.02-.787,4.38a12.292,12.292,0,0,1-1.483,4.169,3.513,3.513,0,0,1-2.609,1.633l-159.1-1.967a4.089,4.089,0,0,1-4.133-2.671,8.378,8.378,0,0,1-.513-2.619q-.053-.972-.125-1.941-.146-1.945-.368-3.874-.29-2.5-.715-4.957-.154-.9-.329-1.783c-4.416-22.577-17.852-41.28-44.394-40.741-26.7.542-40.51,23.739-41.986,39.266-.588,6.182,1.287,8.49-6.189,8.205l-24.732-.945-16.641-.636-3.764-.143-19.777-.756a.921.921,0,0,1-.885-.953l.166-4.308-8.818-7.1a3.4,3.4,0,0,1-1.309-2.732v-8.48a2,2,0,0,1,2.006-2l11.449.1h5.119l.047-1.619c.107-4.167.094-7.341.334-9.884a18.378,18.378,0,0,1,.572-3.3c1.512-5.3,6.3-7.991,16.014-13.619-2.008-2.719-1.9-5.536-4.963-8.942-3.152-3.507-11.486-5.448-16.2-8.541a8.375,8.375,0,0,1-3.83-8.1l5.078-.078,43.371-.659a28.459,28.459,0,0,0,4.418,3.534,16.955,16.955,0,0,0,2.354,1.32,95.873,95.873,0,0,0,12.471-1c.295-.055.576-.113.84-.175.49-.114,1.037-.254,1.588-.4a30.641,30.641,0,0,0,3.33-1.063c.965-.416,1.963.273,3.205,1.047a507.615,507.615,0,0,1,72.824-27.6c-.055-.243-.116-.481-.178-.707-.414-1.5.219-1.929,2.226-2.436,4.611-1.163,18.362-4.551,51.6-6.687,39.1-2.514,51.509,2.472,52.688,2.995,1.44-1.774,3.861,1.538,2.5,2.857,18.971,12.68,35.659,23.675,56.376,38.8l1.256-.534c3.812.789,7.505,1.526,11.159,2.22,8.831,1.678,17.419,3.1,26.836,4.368a599.569,599.569,0,0,1,76.441,7.65s.113.254.318.711l2.252.089a1.635,1.635,0,0,1,1.425.914l.345.682c.919,0,1.433,0,2.323.007,1.492.015,1.892.121,2.624,1.409A68.382,68.382,0,0,1,513.3,163.1a7.971,7.971,0,0,1,.384,1.978A46.251,46.251,0,0,1,517.8,167.4Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M181.51,159.737a35.073,35.073,0,1,1-35.048,35.048A35.048,35.048,0,0,1,181.51,159.737Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-headlights fill-current"
+        className="fill-current text-car-headlights"
         d="M507.077,147.673A68.382,68.382,0,0,1,513.3,163.1a7.971,7.971,0,0,1,.384,1.978l-1.663.712-9.889-19.536c.919,0,1.433,0,2.323.007C505.945,146.28,506.344,146.385,507.077,147.673Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-ambers fill-current"
+        className="fill-current text-car-ambers"
         d="M521.461,180.712h14.284a1.1,1.1,0,0,1,1.1,1.1v4.8a1.1,1.1,0,0,1-1.1,1.1H521.46a1.1,1.1,0,0,1-1.1-1.1v-4.8a1.1,1.1,0,0,1,1.1-1.1Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-headlights fill-current"
+        className="fill-current text-car-headlights"
         d="M525.819,193.4c1.007.044,1.72,2.483,1.59,5.449q-.015.331-.041.651l-.584,1.177a5.022,5.022,0,0,1-2.459,2.393,10.989,10.989,0,0,1-.564-4.379C523.89,195.725,524.81,193.357,525.819,193.4Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M521.463,192.637l9.279.065-3.374,6.8q.026-.319.041-.651c.129-2.966-.583-5.4-1.59-5.449s-1.929,2.325-2.059,5.29a10.989,10.989,0,0,0,.564,4.379,5.139,5.139,0,0,1-2.154.435l-2.971-.03a.835.835,0,0,1-.788-1.084Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M438.789,159.9a35.064,35.064,0,1,1-35.048,35.048A35.048,35.048,0,0,1,438.789,159.9Z"
       />
       <circle
         fillRule="evenodd"
-        className={`${wheelColor} fill-current`}
+        className={`${wheelColorText} fill-current`}
         cx="438.789"
         cy="194.953"
         r="26.511"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M438.789,154.832a40.771,40.771,0,0,1,34.556,19.22,39.433,39.433,0,0,1,5.982,20.9c0,6.3.142,10.128.044,12.45a11.207,11.207,0,0,0,.313,3.479l-9.6-.139a35.047,35.047,0,1,0-63.037-.917l-12.476-.181c.282-1.36.5-2.846.787-4.38.3-1.626.6-3.307.877-4.951l.016-.1c.13-.769.257-1.529.38-2.271l.025-.157.07-.425c.085-.514.168-1.018.248-1.508l.005-.038c.363-2.215.681-4.153.938-5.511C402.167,167.788,418.022,154.832,438.789,154.832Z"
       />
       <rect
         fillRule="evenodd"
-        className="text-car-ambers fill-current"
+        className="fill-current text-car-ambers"
         x="387.979"
         y="150.065"
         width="6.774"
@@ -65,153 +73,153 @@ export const Porsche = ({ bodyColor, wheelColor, tintColor }: CarProps) => {
       />
       <path
         fillRule="evenodd"
-        className={`${tintColor} fill-current`}
+        className={`${tintColorText} fill-current`}
         d="M325.72,91.354c18.971,12.68,35.659,23.675,56.376,38.8-7.992,3.415-11.152,5.008-20.475,5.016h-.2a58.823,58.823,0,0,0-2.755-7.649c0-2.263-.343-6.258-3.289-6.258h-5.522a2.879,2.879,0,0,0-2.871,2.871c-2.444-2.438-26.144-26.122-26.423-27.8Z"
       />
       <path
         fillRule="evenodd"
-        className={`${tintColor} fill-current`}
+        className={`${tintColorText} fill-current`}
         d="M317.982,102.879c5.061,4.308,29.147,29.313,29.147,29.313a2.9,2.9,0,0,0,.719,1.14s-11.746-.062-28.2-.151L307.714,98.35q1.025.05,2.028.108C314.787,98.748,314.727,100.108,317.982,102.879Z"
       />
       <path
         fillRule="evenodd"
-        className={`${tintColor} fill-current`}
+        className={`${tintColorText} fill-current`}
         d="M304.981,98.233l11.789,34.932c-19.687-.107-45.168-.248-65.453-.366l-11.126-30.014A311.312,311.312,0,0,1,304.981,98.233Z"
       />
       <path
         fillRule="evenodd"
-        className={`${bodyColor} fill-current`}
+        className={`${bodyColorText} fill-current`}
         d="M259.4,146.117h13.663a.838.838,0,0,1,.836.836v.537a.837.837,0,0,1-.836.837H259.4a7.1,7.1,0,0,0-1.458.141q-.146.031-.3.066l-1.42.341-.881.211a.406.406,0,0,1-.356-.078l-.06-.059a2.03,2.03,0,1,1,.022-3.478l.038-.034a.405.405,0,0,1,.356-.079l.912.218,1.389.334c.1.025.206.047.306.068A7.175,7.175,0,0,0,259.4,146.117Z"
       />
       <path
         fillRule="evenodd"
-        className={`${tintColor} fill-current`}
+        className={`${tintColorText} fill-current`}
         d="M234.011,104.085l9.8,28.669c-15.32-.093-26.246-.165-26.814-.19-7.093-.3-23.72-1.061-27.478-1.662-4.811-.769-9.327-1.087-9.32-4.01C180.217,119.694,220.836,107.39,234.011,104.085Z"
       />
       <path
         fillRule="evenodd"
-        className={`${tintColor} fill-current`}
+        className={`${tintColorText} fill-current`}
         d="M216.344,98.314c-1.182.752-13.08,4.4-29.037,10.4-18.234,6.854-39.726,15.7-39.753,15.7a9.2,9.2,0,0,1-3.488-1.483,507.615,507.615,0,0,1,72.824-27.6C217.146,96.487,217.231,97.75,216.344,98.314Z"
       />
       <circle
         fillRule="evenodd"
-        className={`${wheelColor} fill-current`}
+        className={`${wheelColorText} fill-current`}
         cx="181.51"
         cy="194.786"
         r="26.511"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M180.8,154.893c26.542-.539,39.977,18.164,44.394,40.741l.329,1.783q.427,2.455.715,4.957.223,1.928.368,3.874l-11.915-.142a35.049,35.049,0,1,0-66.615-.792l-48.709-.581a.836.836,0,0,1-.824-.835v-1.324H92.132a.887.887,0,0,1-.883-.883v-.908l16.641.636,24.732.945c7.476.285,5.6-2.023,6.189-8.205C140.288,178.632,154.1,155.435,180.8,154.893Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-ambers fill-current"
+        className="fill-current text-car-ambers"
         d="M104.182,165.737l4.029,8.538-2.193,0-8.051-.016-4.086-.009a2.43,2.43,0,0,0-2.221-1.456H75.483c.107-4.167.094-7.341.334-9.884l20.236.206,4.1.041A4.421,4.421,0,0,1,104.182,165.737Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M80.493,194.8c2.7,1.744,4.668,4.438,6.992,5.841l-19.777-.756a.921.921,0,0,1-.885-.953l.166-4.308Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M535.745,180.712h5.982l.478.149c.658.2,1.252.563,1.252,1.251v4.358a1.256,1.256,0,0,1-1.252,1.251h-6.461a1.108,1.108,0,0,0,1.105-1.1v-4.8A1.109,1.109,0,0,0,535.745,180.712Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M502.244,176.12l.757,4.592h18.46a1.109,1.109,0,0,0-1.105,1.1v4.8a1.108,1.108,0,0,0,1.105,1.1H504.156l.791,4.8-2.387-.016-13.732-.095q.108.934.222,1.88c.574,4.707,1.383,8.952,5.575,11.379,2.332,1.351,5.711,2.138,10.678,2.13l19.861-.033,2.626,6.379c-.612,0-42.935.063-43.768.02a4.226,4.226,0,0,1-4.338-3.287,11.205,11.205,0,0,1-.313-3.479c.1-2.322-.044-6.15-.044-12.45a39.428,39.428,0,0,0-5.982-20.9l5.715.04,6.606.046,16.27.114,21.843.153,3.5.024,3.09.022a.974.974,0,0,1,.8.406l.936,1.264Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M445.7,178.97a18.486,18.486,0,0,1,7.443,6.17l-.15.1c-.79.265-4.441.774-6.9,1.11Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M449.229,199.242l6.9-2.654a18.478,18.478,0,0,1-3.567,8.984l-.141-.113C451.921,204.79,450.308,201.475,449.229,199.242Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M437.935,206.208l4.656,5.737a18.469,18.469,0,0,1-9.648-.616l.063-.167C433.49,210.483,436.145,207.924,437.935,206.208Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M421.587,194.463c.795.251,4.048,1.984,6.233,3.156l-4.018,6.2a18.469,18.469,0,0,1-2.4-9.366Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M433.938,178.442c.008.833-.636,4.463-1.075,6.9l-7.139-1.9a18.48,18.48,0,0,1,8.166-5.172Z"
       />
       <circle
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         cx="438.789"
         cy="194.953"
         r="4.201"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M188.421,178.8a18.479,18.479,0,0,1,7.443,6.169l-.15.1c-.79.265-4.441.774-6.9,1.11Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M191.951,199.076l6.895-2.655a18.478,18.478,0,0,1-3.566,8.985l-.141-.113C194.642,204.623,193.03,201.309,191.951,199.076Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M180.657,206.041l4.656,5.737a18.473,18.473,0,0,1-9.647-.616l.064-.168C176.211,210.317,178.866,207.758,180.657,206.041Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M164.308,194.3c.795.25,4.048,1.984,6.233,3.157l-4.018,6.2a18.468,18.468,0,0,1-2.4-9.366Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M176.66,178.275c.008.833-.636,4.463-1.075,6.9l-7.139-1.905a18.484,18.484,0,0,1,8.167-5.172Z"
       />
       <circle
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         cx="181.51"
         cy="194.786"
         r="4.202"
       />
       <path
         fillRule="evenodd"
-        className={`${bodyColor} fill-current`}
+        className={`${bodyColorText} fill-current`}
         d="M361.418,135.173a16.229,16.229,0,0,1,.625,4.756c-.135,2.61-.47,2.726-3.394,2.726h-6.056a1.63,1.63,0,0,1-1.546-1.527l-.056-1.558c-.128-3.6,4.382-.122,4.382-3.235V134.15c3.064,0,3.289-4.3,3.289-6.626A58.9,58.9,0,0,1,361.418,135.173Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M325.72,91.354l-5.163,4.985-.175.169c-.294-1.767-1.417-2.6.294-4.713l2.643-3.255a1.162,1.162,0,0,1,1.443-.41c1.067.52,1.88,2.324.962,3.219Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M347.848,133.332s-11.747-.062-28.2-.151L307.714,98.35q1.025.05,2.028.108c5.045.29,4.986,1.65,8.24,4.421,5.061,4.308,29.147,29.313,29.147,29.313a2.841,2.841,0,0,1-.15-.914v-1.746s-21.536-22.669-26.8-27.62c-3.387-3.185-4.7-5.213-9.956-5.547-33.442-2.121-84.47,2.788-114.933,16.969-8.541,3.976-18.555,8.54-18.408,13.253s5.007,5.448,10.014,6.332,31.951,2.064,31.951,2.064q5.312-.165,10.791-.3,3.907-.1,7.877-.162h.007q5.494-.09,11.114-.127c31.729-.216,66.9.691,106.741.772V134.15h-5.522a2.861,2.861,0,0,1-2-.818Zm-96.531-.533-11.126-30.014a311.284,311.284,0,0,1,64.79-4.552l11.789,34.932-1.728-.009c-19.194-.1-43.423-.238-63-.353l-.73,0Zm-7.5-.049v0c-15.32-.092-26.246-.166-26.814-.19-7.093-.3-23.72-1.061-27.478-1.662-4.811-.769-9.327-1.087-9.32-4.01.015-7.2,40.634-19.5,53.809-22.808Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M230.824,195.7q.188.9.357,1.808.461,2.463.8,4.959l-5.743-.1q.223,1.928.368,3.874l0,.062q.069.924.119,1.849l0,.03a8.381,8.381,0,0,0,.513,2.619,4.091,4.091,0,0,0,4.133,2.671l156.861,1.94,2.243.028a3.514,3.514,0,0,0,2.609-1.633,12.292,12.292,0,0,0,1.483-4.169c.282-1.36.5-2.846.787-4.38.159-.846.516-2.922.861-4.951.151-.886.3-1.763.428-2.525l-4.51-.057-7.931-.1-121.237-1.524c-.193-.067-.356-.121-.425-.135-14.8-3.02-17.927-16.689-28.416-26.825-8.422-8.139-14.24-7.157-20.057-7.157,8.63,8.577,14.047,20.675,16.752,33.713Zm160.8,4.413q.256-1.195.518-2.386Z"
       />
       <path
         fillRule="evenodd"
-        className="text-car-default fill-current"
+        className="fill-current text-car-default"
         d="M66.988,194.659v-.037l-8.818-7.1a3.4,3.4,0,0,1-1.309-2.732v-8.48a2,2,0,0,1,2.006-2l11.449.1h5.119l.047-1.619H91.661l1.037.234,1.064.985.292.236,3.913.008,8.051.016,2.193,0,.008.017-.145,15.439-.024,2.591-12.17-.1h0L75.745,192.1l.144.7.706.465,1.439.339,1.266.515,1.234.722-13.342-.217Z"
       />
       <path

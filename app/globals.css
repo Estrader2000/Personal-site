@@ -36,14 +36,15 @@
 
     --radius: 0.5rem;
 
-    --light-silver-wheels: 60 1% 70%;
-    --black-wheels: 0 0% 8%;
-    --silver-wheels: 0 0% 46%;
+    --light-silver: 60 1% 70%;
+    --black: 0 0% 8%;
     --silver: 0 0% 46%;
     --red: 1 61% 43%;
     --white: 180 2% 92%;
     --blue: 200 47% 42%;
-    --black: 0 0% 8%;
+    --default: #3b3b3b;
+    --headlights: #eaebeb;
+    --ambers: #e6b219;
   }
 
   .dark {
@@ -75,14 +76,17 @@
     --input: 215 27.9% 16.9%;
     --ring: 216 12.2% 83.9%;
 
-    --light-silver-wheels: 60 1% 70%;
-    --black-wheels: 0 0% 8%;
-    --silver-wheels: 0 0% 46%;
+    --light-silver: 60 1% 70%;
+    --black: 0 0% 8%;
     --silver: 0 0% 46%;
     --red: 1 61% 43%;
     --white: 180 2% 92%;
     --blue: 200 47% 42%;
-    --black: 0 0% 8%;
+
+    --green: 154 100% 13%;
+    --default: #3b3b3b;
+    --headlights: #eaebeb;
+    --ambers: #e6b219;
   }
 }
 

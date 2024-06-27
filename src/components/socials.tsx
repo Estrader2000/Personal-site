@@ -16,21 +16,6 @@ export default function Socials() {
         </Button>
         <span className="sr-only">LinkedIn</span>
       </a>
-      <a href="mailto:elystrader1@gmail.com" target="_blank">
-        <Button variant="ghost" size="icon">
-          <Mail strokeWidth={1} />
-        </Button>
-        <span className="sr-only">Email</span>
-      </a>
-      <a
-        href="src\assets\Ely Strader Resume.docx.pdf"
-        download="Ely Strader's resume"
-      >
-        <Button variant="ghost" size="icon">
-          <ArrowDownToLine strokeWidth={1} />
-        </Button>
-        <span className="sr-only">Download Resume</span>
-      </a>
     </>
   );
 }
