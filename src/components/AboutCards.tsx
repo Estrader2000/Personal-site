@@ -20,7 +20,8 @@ import {
 import { Progress } from "./ui/progress";
 import Surfing from "@/assets/surfing";
 import Traveling from "@/assets/Traveling";
-import SurfingIcon from "@/assets/surfing-icon";
+import WorkingOnCar from "@/assets/working-on-car";
+import GuyAtDesk from "@/assets/guy-at-desk";
 
 const iconNameMap = {
   HTML: <FaHtml5 className="m-1 size-8" />,
@@ -39,11 +40,11 @@ const iconNameMap = {
 
 export const TechGridCard = () => {
   return (
-    <Card className="mx-auto w-full max-w-[400px] justify-self-center">
+    <Card className="mx-auto w-full max-w-[400px] justify-self-center lg:max-h-[378px]">
       <CardHeader className="flex justify-center p-4 md:p-6">
         <CardTitle className="text-center">Some things I use</CardTitle>
       </CardHeader>
-      <CardContent className="px-auto grid grid-cols-3 grid-rows-4 gap-2 text-sm">
+      <CardContent className="px-auto grid grid-cols-3 grid-rows-4 gap-2 text-sm md:gap-4">
         {Object.entries(iconNameMap).map(([name, Icon]) => (
           <span
             key={name}
@@ -60,17 +61,17 @@ export const TechGridCard = () => {
   );
 };
 const favoriteStackMap = {
-  Tailwind: 90,
+  TailwindCSS: 90,
   React: 70,
-  Next: 30,
-  Node: 30,
+  NextJS: 30,
+  NodeJS: 30,
 };
 
 export const FavoriteStackCard = () => {
   return (
-    <Card className="mx-auto w-full max-w-[400px] justify-self-center">
-      <CardHeader className="md:pb-1">
-        <CardTitle className="text-center">Favorite Stack</CardTitle>
+    <Card className="mx-auto w-full max-w-[400px] justify-self-center lg:max-h-[378px]">
+      <CardHeader>
+        <CardTitle className="text-center">My Current Stack</CardTitle>
         <CardDescription>
           <span className="flex justify-between">
             <span>0 Yrs</span>
@@ -79,9 +80,9 @@ export const FavoriteStackCard = () => {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <span className="space-y-2">
+        <span className="flex flex-grow flex-col space-y-2">
           {Object.entries(favoriteStackMap).map(([name, value]) => (
-            <div className="flex flex-col" key={name}>
+            <div className="flex flex-grow flex-col" key={name}>
               <p className="pb-2 text-sm font-medium md:text-lg">{name}</p>
               <span className="md:py-1">
                 <Progress value={value} />
@@ -96,7 +97,7 @@ export const FavoriteStackCard = () => {
 
 export const HobbiesCard = () => {
   return (
-    <Card className="mx-auto w-full max-w-[400px] justify-self-center">
+    <Card className="mx-auto w-full max-w-[400px] justify-self-center lg:max-h-[378px]">
       <CardHeader>
         <CardTitle className="text-center">Hobbies & Interests</CardTitle>
       </CardHeader>
@@ -104,12 +105,15 @@ export const HobbiesCard = () => {
         <div className="col-span-3 rounded-sm bg-secondary">
           <Traveling />
         </div>
-        <div className="rouned-sm col-span-2 aspect-square w-full bg-secondary">
+        <div className="col-span-2 w-full rounded-sm bg-secondary">
           <Surfing />
         </div>
 
         <div className="col-span-2 row-span-2 rounded-sm bg-secondary">
-          <SurfingIcon />
+          <WorkingOnCar />
+        </div>
+        <div className="col-span-3 row-span-2 rounded-sm bg-secondary">
+          <GuyAtDesk />
         </div>
       </CardContent>
     </Card>

@@ -1,6 +1,6 @@
 export default function Traveling() {
   return (
-    <svg viewBox="0 0 923 637.60452" className="h-30 w-full object-contain">
+    <svg viewBox="0 0 923 637.60452" className="w-full object-cover">
       <path
         id="e8d007e8-8581-4ac8-8421-0613b3e5935f-2777"
         data-name="Path 133"

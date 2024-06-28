@@ -14,16 +14,16 @@ const Nav = () => {
       <nav className="ml-4 flex items-center">
         <div className="hidden w-full gap-4 md:flex">
           <ul className="flex gap-8">
-            <li>
+            <li className="hover:text-muted-foreground">
               <a href="#home">Home</a>
             </li>
-            <li>
+            <li className="hover:text-muted-foreground">
               <a href="#about">About</a>
             </li>
-            <li>
+            <li className="hover:text-muted-foreground">
               <a href="#projects">Projects</a>
             </li>
-            <li>
+            <li className="hover:text-muted-foreground">
               <a href="#contact">Contact</a>
             </li>
           </ul>

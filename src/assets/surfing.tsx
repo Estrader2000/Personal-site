@@ -1,9 +1,6 @@
 export default function Surfing() {
   return (
-    <svg
-      viewBox="0 0 575.92739 623.45484"
-      className="h-30 w-full object-contain"
-    >
+    <svg viewBox="0 0 575.92739 623.45484" className="w-full object-cover">
       <polygon
         points="216.58035 539.9325 429.58035 530.45484 548.58038 623.45484 147.58035 623.45484 216.58035 539.9325"
         fill="#f2f2f2"
