@@ -8,11 +8,11 @@ import CarComponent from "@/components/car-component";
 
 export default function About() {
   return (
-    <section id="about" className="md:gap-18 flex flex-col gap-8 lg:gap-24">
+    <section id="about" className="md:gap-18 flex flex-col gap-8 xl:gap-24">
       <h1 className="text-center text-4xl font-bold md:text-6xl">About me</h1>
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div className="flex flex-col gap-6">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-6 xl:grid-cols-3 xl:gap-12">
+          <div className="flex flex-col gap-6 md:col-span-3 md:col-start-1 xl:col-span-1">
             <p className="text-justify text-lg md:order-2 md:text-2xl">
               With a strong foundation in both front-end and back-end
               technologies, I excel at crafting intuitive
@@ -28,7 +28,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 md:col-span-3 md:col-start-4 xl:col-span-1">
             <p className="text-justify text-lg md:order-2 md:text-2xl">
               I primarily use the Javascript ecosystem, including React, Next,
               Node, and Typescript. These allow me to create powerful websites
@@ -40,15 +40,15 @@ export default function About() {
               <FavoriteStackCard />
             </div>
           </div>
-          <div className="flex flex-col gap-6">
-            <div className="justify-centerflex mx-auto md:order-2">
-              <ul className="ml-6 list-disc text-lg md:text-2xl">
-                <li>Attending car shows</li>
-                <li>I love traveling and trying new foods</li>
-                <li>If the waves are good I'm probably surfing</li>
-                <li>Hiking, especially somewhere scenic</li>
-                <li>Gaming with friends is one way I like to relax</li>
-              </ul>
+          <div className="flex flex-col gap-6 md:col-span-4 md:col-start-2 xl:col-span-1">
+            <div className="mx-auto flex justify-center text-justify md:order-2">
+              <p className="text-lg md:text-2xl">
+                When I'm not coding, I love exploring new things. I would spend
+                all my time traveling or hiking new scenic trails if I could. In
+                the summer, you'll find me surfing at the beach. I also like
+                going on drives, working on my car, and going to car meets. Some
+                days I stay home, gaming with friends.
+              </p>
             </div>
             <div className="md:order-1">
               <HobbiesCard />
