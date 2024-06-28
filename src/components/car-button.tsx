@@ -22,7 +22,10 @@ export function CarButton({ partColor, onClick }: CarButtonProps) {
           {partColor.label}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="min-w-[max-content]" align="end">
+      <DropdownMenuContent
+        className="min-w-[max-content] bg-gradient-to-b from-secondary-foreground to-secondary dark:bg-gradient-to-b dark:from-secondary dark:to-secondary-foreground"
+        align="end"
+      >
         {partColor.colors.map((colr) => {
           const isActive = partColor.color === colr;
           const bg = `bg-car-${colr}`;
@@ -52,4 +55,4 @@ export function CarButton({ partColor, onClick }: CarButtonProps) {
     </DropdownMenu>
   );
 }
-// Colors so that Tailwind can compute dynamic color changes: bg-car-blue bg-car-red bg-car-light-silver bg-car-silver bg-car-black bg-car white bg-car-green bg-car-white border-car-white border-car-silver border-car-blue border-car-red border-car-light-silver border-car-green border-car-black
+// DO NOT DELETE ---> Colors so that Tailwind can compute dynamic color changes: bg-car-blue bg-car-red bg-car-light-silver bg-car-silver bg-car-black bg-car white bg-car-green bg-car-white border-car-white border-car-silver border-car-blue border-car-red border-car-light-silver border-car-green border-car-black

@@ -2,23 +2,6 @@ import { Porsche } from "@/Porsche";
 import { useState } from "react";
 import { CarButton } from "./car-button";
 
-type BodyColor = "blue" | "red" | "black" | "white" | "silver" | "green";
-
-type TintColor = "black" | "white" | "silver";
-
-type WheelColor = "light-silver" | "silver" | "black";
-
-type BodyColors = [
-  "blue-body",
-  "red-body",
-  "black-body",
-  "white-body",
-  "silver-body",
-  "green-body",
-];
-type WheelColors = ["light-silver-wheels", "silver-wheels", "black-wheels"];
-type TintColors = ["black-tint", "white-tint", "silver-tint"];
-
 export type Options = {
   label: string;
   color: string;
@@ -27,18 +10,18 @@ export type Options = {
 
 const tintColorOptions = {
   label: "Tint",
-  color: "silver",
-  colors: ["black", "white", "silver"],
+  color: "white",
+  colors: ["white", "silver", "black"],
 };
 const wheelColorOptions = {
   label: "Wheels",
-  color: "black",
+  color: "light-silver",
   colors: ["light-silver", "silver", "black"],
 };
 const bodyColorOptions = {
   label: "Body",
   color: "blue",
-  colors: ["blue", "red", "black", "white", "silver", "green"],
+  colors: ["white", "silver", "blue", "red", "green", "black"],
 };
 
 export default function CarComponent() {
