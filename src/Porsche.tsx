@@ -5,7 +5,6 @@ type Props = {
 };
 
 export const Porsche = ({ bodyColor, wheelColor, tintColor }: Props) => {
-  //text-car-blue text-car-white text-car-black text-car-red text-car-silver text-car-light-silver text-car-green
   const bodyColorText = `text-car-${bodyColor}`;
   const tintColorText = `text-car-${tintColor}`;
   const wheelColorText = `text-car-${wheelColor}`;
@@ -229,3 +228,4 @@ export const Porsche = ({ bodyColor, wheelColor, tintColor }: Props) => {
     </svg>
   );
 };
+//DO NOT DELETE --->  colors so tailwind can dynamically compute colors: text-car-blue text-car-white text-car-black text-car-red text-car-silver text-car-light-silver text-car-green
