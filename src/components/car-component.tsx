@@ -3,23 +3,19 @@ import { useState } from "react";
 import { CarButton } from "./car-button";
 
 export type Options = {
-  label: string;
   color: string;
   colors: string[];
 };
 
 const tintColorOptions = {
-  label: "Tint",
   color: "white",
   colors: ["white", "silver", "black"],
 };
 const wheelColorOptions = {
-  label: "Wheels",
   color: "light-silver",
   colors: ["light-silver", "silver", "black"],
 };
 const bodyColorOptions = {
-  label: "Body",
   color: "blue",
   colors: ["white", "silver", "blue", "red", "green", "black"],
 };
@@ -44,9 +40,21 @@ export default function CarComponent() {
   return (
     <>
       <div className="align-center flex justify-center gap-4 md:gap-8">
-        <CarButton partColor={wheelColor} onClick={handleWheelColorClick} />
-        <CarButton partColor={bodyColor} onClick={handleBodyColorClick} />
-        <CarButton partColor={tintColor} onClick={handleTintColorClick} />
+        <CarButton
+          label="Wheels"
+          partColor={wheelColor}
+          onClick={handleWheelColorClick}
+        />
+        <CarButton
+          label="Body"
+          partColor={bodyColor}
+          onClick={handleBodyColorClick}
+        />
+        <CarButton
+          label="Tint"
+          partColor={tintColor}
+          onClick={handleTintColorClick}
+        />
       </div>
       <Porsche
         bodyColor={bodyColor.color}

@@ -73,18 +73,18 @@ export const FavoriteStackCard = () => {
       <CardHeader>
         <CardTitle className="text-center">My Current Stack</CardTitle>
         <CardDescription>
-          <span className="flex justify-between">
+          <span className="flex justify-between py-1">
             <span>0 Yrs</span>
             <span>3 Yrs</span>
           </span>
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <span className="flex flex-grow flex-col space-y-2">
+        <span className="flex flex-grow flex-col">
           {Object.entries(favoriteStackMap).map(([name, value]) => (
             <div className="flex flex-grow flex-col" key={name}>
-              <p className="pb-2 text-sm font-medium md:text-lg">{name}</p>
-              <span className="md:py-1">
+              <p className="pb-1 text-sm font-medium md:text-lg">{name}</p>
+              <span className="py-2">
                 <Progress value={value} />
               </span>
             </div>
