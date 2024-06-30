@@ -10,17 +10,16 @@ import { FaCheck } from "react-icons/fa6";
 import { type Options } from "@/components/car-component";
 
 export type CarButtonProps = {
+  label: String;
   partColor: Options;
   onClick: (color: string) => void;
 };
 
-export function CarButton({ partColor, onClick }: CarButtonProps) {
+export function CarButton({ label, partColor, onClick }: CarButtonProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="default" className="md:text-xl">
-          {partColor.label}
-        </Button>
+        <Button variant="default">{label}</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
         className="min-w-[max-content] bg-gradient-to-b from-secondary-foreground to-secondary dark:bg-gradient-to-b dark:from-secondary dark:to-secondary-foreground"
